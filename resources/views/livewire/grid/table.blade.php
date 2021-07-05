@@ -15,8 +15,8 @@
     </div>
 
     {{-- You can include these forms into a modal --}}
-    @include("spatie-permissions-gui::components.theme-grid.partials.new-role")
-    @include("spatie-permissions-gui::components.theme-grid.partials.new-permission")
+    @include("spatie-permissions-gui::livewire.grid.partials.new-role")
+    @include("spatie-permissions-gui::livewire.grid..partials.new-permission")
     {{-- The roles/permissions matrix table --}}
-    @include("spatie-permissions-gui::components.theme-grid.partials.mappings")
+    @include("spatie-permissions-gui::livewire.grid.partials.mappings")
 </div>
