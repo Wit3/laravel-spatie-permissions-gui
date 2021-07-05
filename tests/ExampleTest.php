@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorName\Skeleton\Tests;
+namespace Wit3\LaravelSpatiePermissionsGui\Tests;
 
 class ExampleTest extends TestCase
 {
