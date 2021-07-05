@@ -83,7 +83,7 @@ class PermissionActions extends Component
 
         $referencePermission = SpatiePermission::where("name", "=", $oldnameSuffixed)->first();
 
-        if (!$referencePermission) {
+        if (! $referencePermission) {
             return;
         }
 
