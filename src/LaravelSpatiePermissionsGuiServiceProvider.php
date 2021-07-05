@@ -6,6 +6,7 @@ use Livewire\Livewire;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 use Wit3\LaravelSpatiePermissionsGui\Commands\LaravelSpatiePermissionsGuiCommand;
+use Wit3\LaravelSpatiePermissionsGui\Http\Livewire\Button;
 use Wit3\LaravelSpatiePermissionsGui\Http\Livewire\PermissionActions;
 use Wit3\LaravelSpatiePermissionsGui\Http\Livewire\Permissions;
 use Wit3\LaravelSpatiePermissionsGui\Http\Livewire\RoleActions;
