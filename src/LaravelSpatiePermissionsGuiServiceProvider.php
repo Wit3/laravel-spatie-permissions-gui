@@ -25,14 +25,10 @@ class LaravelSpatiePermissionsGuiServiceProvider extends PackageServiceProvider
             // ->hasMigration('create_laravel-spatie-permissions-gui_table')
             ->hasRoute('web')
             ->hasCommand(LaravelSpatiePermissionsGuiCommand::class);
-
-
-            
     }
 
     public function packageBooted()
     {
         Livewire::component('permissions', Permissions::class);
-
     }
 }
