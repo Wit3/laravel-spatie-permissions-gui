@@ -17,4 +17,6 @@ use Wit3\LaravelSpatiePermissionsGui\Components\Permission\Permissions;
 // });
 Route::get('prova', fn () =>  dd("yes"));
 Route::get('permissions', Permissions::class)
-    ->name("permissions");
+    ->name("permissions")
+    ->middleware(config("spatie-permission-gui.middleware", []));
+    ;
