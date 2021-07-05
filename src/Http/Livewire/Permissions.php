@@ -21,9 +21,9 @@ class Permissions extends Component
 
     public function mount()
     {
-        $this->useActions = config("permission-ui.use_common_actions", false);
-        $this->actions = config("permission-ui.actions", []);
-        $this->separator = config("permission-ui.permission_action_separator", "-");
+        $this->useActions = config("spatie-permissions-gui.use_common_actions", false);
+        $this->actions = config("spatie-permissions-gui.actions", []);
+        $this->separator = config("spatie-permissions-gui.permission_action_separator", "-");
         if (count($this->actions) === 0) {
             $this->useActions = false;
         }
@@ -95,7 +95,7 @@ class Permissions extends Component
 
     public function refreshMappings()
     {
-        $this->updated = ! $this->updated;
+        $this->updated = !$this->updated;
         $this->dispatchBrowserEvent("refresh-mappings");
         $this->emit("refreshButton");
     }

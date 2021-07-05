@@ -29,7 +29,7 @@
                 <tr class="sm:hidden">
                     <td colspan="5"
                         class="px-4 pt-2 w-full rounded-t-lg  {{ $rowmod ? 'bg-gray-100' : 'bg-cool-gray-100' }}">
-                        @livewire("permission-actions", [
+                        @livewire("spatie-permissions-gui::permission-actions", [
                         "permission" => $useActions ? $permission : $permission->name
                         ], key("permission-actions-1-" . ($useActions ? $permission : $permission->id)))
                     </td>
@@ -37,7 +37,7 @@
                 <tr>
                     <td
                         class="hidden sm:table-cell px-4 w-full rounded-l-lg  {{ $rowmod ? 'bg-gray-100' : 'bg-cool-gray-100' }}">
-                        @livewire("permission-actions", [
+                        @livewire("spatie-permissions-gui::permission-actions", [
                         "permission" => $useActions ? $permission : $permission->name
                         ], key("permission-actions-2-" . ($useActions ? $permission : $permission->id)))
                     </td>
@@ -47,7 +47,7 @@
                             <td
                                 class="p-2 text-center {{ $loop->first ? 'rounded-bl-lg sm:rounded-bl-none' : '' }} {{ $loop->last ? 'rounded-br-lg sm:rounded-r-lg' : '' }} {{ $rowmod ? 'bg-gray-100' : 'bg-cool-gray-100' }}">
                                 @if ($perm instanceof \Spatie\Permission\Models\Permission)
-                                    @livewire("button", [
+                                    @livewire("spatie-permissions-gui::button", [
                                     "role" => $role,
                                     "permission" => $perm->id
                                     ], key("permission-button-1-$perm->id-$role"))
@@ -60,7 +60,7 @@
                     @else
                         <td class="p-2 text-center rounded-r bg-cool-gray-200">
                             @if ($permission instanceof \Spatie\Permission\Models\Permission)
-                                @livewire("button", [
+                                @livewire("spatie-permissions-gui::button", [
                                 "role" => $role,
                                 "permission" => $permission->id
                                 ], key("permission-button-2-$permission->id-$role"))

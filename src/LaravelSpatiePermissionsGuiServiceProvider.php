@@ -24,17 +24,14 @@ class LaravelSpatiePermissionsGuiServiceProvider extends PackageServiceProvider
             ->name('laravel-spatie-permissions-gui')
             ->hasConfigFile()
             ->hasViews()
-            // ->hasViewComponents('permissions', [Permissions::class])
-            // ->hasMigration('create_laravel-spatie-permissions-gui_table')
-            ->hasRoute('web')
             ->hasCommand(LaravelSpatiePermissionsGuiCommand::class);
     }
 
     public function packageBooted()
     {
-        Livewire::component('button', Button::class);
-        Livewire::component('permissions', Permissions::class);
-        Livewire::component('permission-actions', PermissionActions::class);
-        Livewire::component('role-actions', RoleActions::class);
+        Livewire::component('spatie-permissions-gui::button', Button::class);
+        Livewire::component('spatie-permissions-gui::permissions', Permissions::class);
+        Livewire::component('spatie-permissions-gui::permission-actions', PermissionActions::class);
+        Livewire::component('spatie-permissions-gui::role-actions', RoleActions::class);
     }
 }
