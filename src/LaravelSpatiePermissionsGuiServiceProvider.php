@@ -6,7 +6,9 @@ use Livewire\Livewire;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 use Wit3\LaravelSpatiePermissionsGui\Commands\LaravelSpatiePermissionsGuiCommand;
+use Wit3\LaravelSpatiePermissionsGui\Http\Livewire\PermissionActions;
 use Wit3\LaravelSpatiePermissionsGui\Http\Livewire\Permissions;
+use Wit3\LaravelSpatiePermissionsGui\Http\Livewire\RoleActions;
 
 class LaravelSpatiePermissionsGuiServiceProvider extends PackageServiceProvider
 {
@@ -29,6 +31,9 @@ class LaravelSpatiePermissionsGuiServiceProvider extends PackageServiceProvider
 
     public function packageBooted()
     {
+        Livewire::component('button', Button::class);
         Livewire::component('permissions', Permissions::class);
+        Livewire::component('permission-actions', PermissionActions::class);
+        Livewire::component('role-actions', RoleActions::class);
     }
 }
