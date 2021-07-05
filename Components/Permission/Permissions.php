@@ -119,10 +119,12 @@ class Permissions extends Component
             $roles = SpatieRole::where("name", 'like', '%' . $this->searchKeyword . '%')->with("permissions")->get();
         }
 
-        return view("permission-ui::components.theme-" . config('permission-ui.theme') . ".table", [
-            "roles" => $roles,
-            "permissions" => $permissions,
-            "permissionGroups" => $permissionGroups,
-        ])->extends(config("permission-ui.template_to_extend", "layouts.app"));
+        // return view("permission-ui::components.theme-" . config('permission-ui.theme') . ".table", [
+        //     "roles" => $roles,
+        //     "permissions" => $permissions,
+        //     "permissionGroups" => $permissionGroups,
+        // ])->extends(config("permission-ui.template_to_extend", "layouts.app"));
+
+        return view('laravel-spatie-permissions-gui::components.permissions.index');
     }
 }
