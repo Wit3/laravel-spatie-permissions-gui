@@ -4,6 +4,7 @@
             width: 100%;
             min-width: 34px;
         }
+
     </style>
 
     <div class="flex items-end sm:w-1/2">
@@ -14,8 +15,8 @@
     </div>
 
     {{-- You can include these forms into a modal --}}
-    @include("permission-ui::components.theme-grid.partials.new-role")
-    @include("permission-ui::components.theme-grid.partials.new-permission")
+    @include("spatie-permissions-gui::components.theme-grid.partials.new-role")
+    @include("spatie-permissions-gui::components.theme-grid.partials.new-permission")
     {{-- The roles/permissions matrix table --}}
-    @include("permission-ui::components.theme-grid.partials.mappings")
+    @include("spatie-permissions-gui::components.theme-grid.partials.mappings")
 </div>
