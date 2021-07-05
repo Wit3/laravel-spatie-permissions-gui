@@ -1,7 +1,6 @@
 <?php
 namespace Wit3\LaravelSpatiePermissionsGui\Http\Livewire\Permission;
 
-
 use Livewire\Component;
 use Spatie\Permission\Models\Permission as SpatiePermission;
 use Spatie\Permission\Models\Role as SpatieRole;
