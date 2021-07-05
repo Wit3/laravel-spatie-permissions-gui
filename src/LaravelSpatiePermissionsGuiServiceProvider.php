@@ -5,7 +5,7 @@ namespace Wit3\LaravelSpatiePermissionsGui;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 use Wit3\LaravelSpatiePermissionsGui\Commands\LaravelSpatiePermissionsGuiCommand;
-use Wit3\LaravelSpatiePermissionsGui\Permission;
+use Wit3\LaravelSpatiePermissionsGui\Permissions;
 
 class LaravelSpatiePermissionsGuiServiceProvider extends PackageServiceProvider
 {
@@ -20,8 +20,7 @@ class LaravelSpatiePermissionsGuiServiceProvider extends PackageServiceProvider
             ->name('laravel-spatie-permissions-gui')
             ->hasConfigFile()
             ->hasViews()
-            // ->hasViewComponent('permission',[Permission::class])
-            ->hasViewComponents('spatie', [Permission::class])
+            ->hasViewComponents('permissions', [Permissions::class])
             ->hasMigration('create_laravel-spatie-permissions-gui_table')
             ->hasRoute('web')
             ->hasCommand(LaravelSpatiePermissionsGuiCommand::class);
