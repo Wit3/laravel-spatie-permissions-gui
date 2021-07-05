@@ -31,9 +31,9 @@ class LaravelSpatiePermissionsGuiServiceProvider extends PackageServiceProvider
 
     public function packageBooted()
     {
-        Livewire::component('button', Button::class);
-        Livewire::component('permissions', Permissions::class);
-        Livewire::component('permission-actions', PermissionActions::class);
-        Livewire::component('role-actions', RoleActions::class);
+        Livewire::component('spatie-permissions-gui::button', Button::class);
+        Livewire::component('spatie-permissions-gui::permissions', Permissions::class);
+        Livewire::component('spatie-permissions-gui::permission-actions', PermissionActions::class);
+        Livewire::component('spatie-permissions-gui::role-actions', RoleActions::class);
     }
 }
