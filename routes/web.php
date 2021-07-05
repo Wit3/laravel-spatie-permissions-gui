@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Wit3\LaravelSpatiePermissionsGui\Components\Permission\Permissions;
 use Wit3\LaravelSpatiePermissionsGui\Http\Controllers\PermissionController;
 
 /**
