@@ -3,11 +3,11 @@
         <div class="flex-shrink-0 w-full p-4 border-t lg:w-80">
             <div class="flex flex-col min-h-0">
                 <h3 class="pb-2 text-base font-semibold">@lang("Search")</h3>
-                @include("spatie-permissions-gui::livewire.theme-column.partials.search")
+                @include("spatie-permissions-gui::livewire.column.partials.search")
                 <h3 class="pb-2 text-base font-semibold">@lang("Roles")</h3>
-                @include("spatie-permissions-gui::livewire.theme-column.partials.role-list")
+                @include("spatie-permissions-gui::livewire.column.partials.role-list")
                 <h3 class="pb-2 text-base font-semibold">@lang("Add new Role")</h3>
-                @include("spatie-permissions-gui::livewire.theme-column.partials.new-role")
+                @include("spatie-permissions-gui::livewire.column.partials.new-role")
             </div>
         </div>
         <div class="flex-1 p-8 bg-white">
@@ -18,11 +18,11 @@
                     role to limit an user^s authorized actions.")</p>
             </div>
             @if ($role)
-                @include("spatie-permissions-gui::livewire.theme-column.partials.mappings", [
+                @include("spatie-permissions-gui::livewire.column.partials.mappings", [
                 "role" => $role,
                 "updated" => $updated
                 ])
-                @include("spatie-permissions-gui::livewire.theme-column.partials.new-permission")
+                @include("spatie-permissions-gui::livewire.column.partials.new-permission")
             @else
                 <div class="p-4">
                     @lang("Select a role from the left to begin with.")
