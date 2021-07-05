@@ -125,6 +125,7 @@ class Permissions extends Component
         // ])->extends(config("permission-ui.template_to_extend", "layouts.app"));
 
         return view('spatie-permissions-gui::components.permissions.index')
-        ->extends(config("spatie-permission-gui.template_to_extend", "layouts.app"));;
+        ->extends(config("laravel-spatie-permission-gui.template_to_extend", "layouts.app"))
+        ;
     }
 }
