@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Wit3\LaravelSpatiePermissionsGui\Components\Permission\Permissions;
+use Wit3\LaravelSpatiePermissionsGui\Http\Controllers\PermissionController;
 
 /**
  * Routes for the package would go here
@@ -16,6 +17,11 @@ use Wit3\LaravelSpatiePermissionsGui\Components\Permission\Permissions;
 //         ->middleware(config("permission-ui.middleware", []));
 // });
 Route::get('prova', fn () =>  dd("yes"));
-Route::get('permissions', Permissions::class)
-    ->name("permissions")
-    ;
+
+
+// Route::get('permissions', Permissions::class)
+//     ->name("permissions")
+//     ;
+
+
+Route::get('permissions', [PermissionController::class, 'index'])->name('permissions.index');

@@ -2,9 +2,11 @@
 
 namespace Wit3\LaravelSpatiePermissionsGui;
 
+use Livewire\Livewire;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 use Wit3\LaravelSpatiePermissionsGui\Commands\LaravelSpatiePermissionsGuiCommand;
+use Wit3\LaravelSpatiePermissionsGui\Http\Livewire\Permission\Permissions;
 
 class LaravelSpatiePermissionsGuiServiceProvider extends PackageServiceProvider
 {
@@ -23,5 +25,14 @@ class LaravelSpatiePermissionsGuiServiceProvider extends PackageServiceProvider
             // ->hasMigration('create_laravel-spatie-permissions-gui_table')
             ->hasRoute('web')
             ->hasCommand(LaravelSpatiePermissionsGuiCommand::class);
+
+
+            
+    }
+
+    public function packageBooted()
+    {
+        Livewire::component('permissions', Permissions::class);
+
     }
 }
