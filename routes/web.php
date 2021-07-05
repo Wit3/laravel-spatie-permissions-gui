@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Wit3\LaravelSpatiePermissionsGui\Permissions;
+use Wit3\LaravelSpatiePermissionsGui\Components\Permission\Permissions;
 
 /**
  * Routes for the package would go here

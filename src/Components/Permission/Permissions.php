@@ -1,6 +1,8 @@
 <?php
 
-namespace Wit3\LaravelSpatiePermissionsGui;
+namespace Wit3\LaravelSpatiePermissionsGui\Components\Permission;
+
+
 
 
 use Livewire\Component;
