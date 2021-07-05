@@ -9,7 +9,7 @@
                 <div class="flex-1 capitalize">{{ $roleRecord->name }}</div>
                 <div
                     class=" {{ isset($role) ? ($role == $roleRecord->id ? 'text-white' : 'text-gray-500') : 'text-gray-500' }}">
-                    @livewire("spatie-permissions-gui::role-actions", [
+                    @livewire("role-actions", [
                     "role" => $roleRecord
                     ], key("role-action-" . $roleRecord->id))
                 </div>
