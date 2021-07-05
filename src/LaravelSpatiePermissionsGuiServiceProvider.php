@@ -20,7 +20,7 @@ class LaravelSpatiePermissionsGuiServiceProvider extends PackageServiceProvider
             ->hasConfigFile()
             ->hasViews()
             // ->hasViewComponents('permissions', [Permissions::class])
-            ->hasMigration('create_laravel-spatie-permissions-gui_table')
+            // ->hasMigration('create_laravel-spatie-permissions-gui_table')
             ->hasRoute('web')
             ->hasCommand(LaravelSpatiePermissionsGuiCommand::class);
     }
