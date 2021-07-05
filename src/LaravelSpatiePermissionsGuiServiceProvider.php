@@ -6,7 +6,7 @@ use Livewire\Livewire;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 use Wit3\LaravelSpatiePermissionsGui\Commands\LaravelSpatiePermissionsGuiCommand;
-use Wit3\LaravelSpatiePermissionsGui\Http\Livewire\Permission\Permissions;
+use Wit3\LaravelSpatiePermissionsGui\Http\Livewire\Permissions;
 
 class LaravelSpatiePermissionsGuiServiceProvider extends PackageServiceProvider
 {
