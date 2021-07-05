@@ -2,7 +2,6 @@
 
 namespace Wit3\LaravelSpatiePermissionsGui\Http\Livewire;
 
-
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\Rule;
 use Livewire\Component;

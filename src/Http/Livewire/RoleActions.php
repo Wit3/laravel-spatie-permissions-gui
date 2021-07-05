@@ -2,7 +2,6 @@
 
 namespace Wit3\LaravelSpatiePermissionsGui\Http\Livewire;
 
-
 use Illuminate\Support\Facades\Validator;
 use Livewire\Component;
 use Spatie\Permission\Models\Permission;
@@ -27,6 +26,7 @@ class RoleActions extends Component
         $role = Role::find($this->role);
         if ($this->name === $role->name) {
             $this->emitUp("refreshMappings");
+
             return;
         }
         $buffered = $this->name;
@@ -36,7 +36,7 @@ class RoleActions extends Component
                 "name" => $buffered,
             ],
             [
-                "name" => "required|filled|unique:roles,name," . $role->id . ",id"
+                "name" => "required|filled|unique:roles,name," . $role->id . ",id",
             ],
             [],
             [
@@ -71,6 +71,7 @@ class RoleActions extends Component
     public function render()
     {
         $role = Role::find($this->role);
+
         return view("spatie-permissions-gui::livewire.column.partials.role-actions", ["roleModel" => $role]);
     }
 }
