@@ -5,7 +5,6 @@ namespace Wit3\LaravelSpatiePermissionsGui;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 use Wit3\LaravelSpatiePermissionsGui\Commands\LaravelSpatiePermissionsGuiCommand;
-use Wit3\LaravelSpatiePermissionsGui\Permission;
 
 class LaravelSpatiePermissionsGuiServiceProvider extends PackageServiceProvider
 {
