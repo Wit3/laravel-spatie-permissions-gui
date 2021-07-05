@@ -72,6 +72,6 @@ class RoleActions extends Component
     {
         $role = Role::find($this->role);
 
-        return view("spatie-permissions-gui::livewire.column.partials.role-actions", ["roleModel" => $role]);
+        return view("spatie-permissions-gui::livewire." . config("spatie-permissions-gui.theme") . ".partials.role-actions", ["roleModel" => $role]);
     }
 }

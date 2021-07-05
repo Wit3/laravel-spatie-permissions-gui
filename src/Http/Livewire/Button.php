@@ -50,6 +50,6 @@ class Button extends Component
 
     public function render()
     {
-        return view("spatie-permissions-gui::livewire.column.partials.button");
+        return view("spatie-permissions-gui::livewire." . config("spatie-permissions-gui.theme") . ".partials.button");
     }
 }

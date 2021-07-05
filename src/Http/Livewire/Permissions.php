@@ -119,7 +119,7 @@ class Permissions extends Component
         }
 
 
-        return view('spatie-permissions-gui::livewire.column.table', [
+        return view('spatie-permissions-gui::livewire.' . config("spatie-permissions-gui.theme") . '.table', [
             "roles" => $roles,
             "permissions" => $permissions,
             "permissionGroups" => $permissionGroups,

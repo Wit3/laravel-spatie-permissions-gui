@@ -135,7 +135,7 @@ class PermissionActions extends Component
     public function render()
     {
         return view(
-            "spatie-permissions-gui::livewire.column.partials.permission-actions",
+            "spatie-permissions-gui::livewire." . config("spatie-permissions-gui.theme") . ".partials.permission-actions",
             ["permission" => $this->permission]
         );
     }
