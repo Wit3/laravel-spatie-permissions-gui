@@ -7,6 +7,6 @@ class PermissionController extends Controller
 {
     public function index()
     {
-        return view('spatie-permissions-gui::permissions.index');
+        return view('spatie-permissions-gui::permissions.index')->extends('layouts.default');
     }
 }
