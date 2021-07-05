@@ -1,5 +1,6 @@
 <?php
-namespace Wit3\LaravelSpatiePermissionsGui\Http\Livewire\Permission;
+
+namespace Wit3\LaravelSpatiePermissionsGui\Http\Livewire;
 
 use Livewire\Component;
 use Spatie\Permission\Models\Permission as SpatiePermission;
@@ -117,14 +118,11 @@ class Permissions extends Component
             $roles = SpatieRole::where("name", 'like', '%' . $this->searchKeyword . '%')->with("permissions")->get();
         }
 
-        // return view("permission-ui::components.theme-" . config('permission-ui.theme') . ".table", [
-        //     "roles" => $roles,
-        //     "permissions" => $permissions,
-        //     "permissionGroups" => $permissionGroups,
-        // ])->extends(config("permission-ui.template_to_extend", "layouts.app"));
 
-        return view('spatie-permissions-gui::components.permissions.index')
-        ->extends(config("spatie-permission-gui.template_to_extend", "layouts.default"))
-        ;
+        return view('spatie-permissions-gui::livewire.column.table', [
+            "roles" => $roles,
+            "permissions" => $permissions,
+            "permissionGroups" => $permissionGroups,
+        ]);
     }
 }
